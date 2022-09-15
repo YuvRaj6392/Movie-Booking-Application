@@ -54,6 +54,7 @@ let n=movieName.toLowerCase();
       if(m===n)
       {
         setPosterUrl(moviesData[i].poster_url)
+        setId(moviesData[i].id)
       }
       
     }
@@ -105,7 +106,7 @@ let n=movieName.toLowerCase();
 
 
        <div id="details" >
-        <img src={posterUrl} alt="" style={{width:"400px"}} />
+      <Link to={`/detail/${id}`}><img src={posterUrl} alt="" style={{width:"400px"}} /></Link>
        </div>
        </div>
        <div style={{textAlign:"center"}}>
